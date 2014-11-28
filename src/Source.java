@@ -4,12 +4,8 @@ import java.io.IOException;
 
 public class Source {
 
-    public static void main(String[] args) throws IOException {
-	FileWriter fw = new FileWriter("testcase");
-	
-	
-	
-	fw.close();
+    public static void main(String[] args) {
+	System.out.println("Welcome in Testing Project ;)");
     }
 
 }
