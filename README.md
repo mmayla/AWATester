@@ -2,7 +2,4 @@
 
 Our Testing Project repo
 
-### Rules ###
-
-
-
+### Guide ###
