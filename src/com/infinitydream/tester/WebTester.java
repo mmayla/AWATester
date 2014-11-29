@@ -26,9 +26,8 @@ public class WebTester {
 	        //Enter text in search box
 	        driver.findElement(By.name("q")).sendKeys("selenium");
 	        Thread.sleep(10000);
+	        //Click Enter to Search
 	        driver.findElement(By.name("q")).sendKeys(Keys.ENTER);
-	        //Click Search button
-	    //    driver.findElement(By.name("btnG")).click();
 	        Thread.sleep(10000);
 	  }
 
