@@ -2,12 +2,38 @@
 <html>
 
 <head>
+    <link rel="stylesheet" href="styles.css">
     <script type="text/javascript" src="js/calculator.js"></script>
 </head>
 
-<body>
-    <div id="calc">
-        
+<body onload="init()">
+    <div id="calc" class="calc">
+        <div id="results" class="results">
+        0
+        </div>
+        <br><br>
+        <button id="1" type="button" onclick="doclick(this)">1</button>
+        <button id="2" type="button" onclick="doclick(this)">2</button>
+        <button id="3" type="button" onclick="doclick(this)">3</button>
+        <br>
+        <button id="4" type="button" onclick="doclick(this)">4</button>
+        <button id="5" type="button" onclick="doclick(this)">5</button>
+        <button id="6" type="button" onclick="doclick(this)">6</button>
+        <br>
+        <button id="7" type="button" onclick="doclick(this)">7</button>
+        <button id="8" type="button" onclick="doclick(this)">8</button>
+        <button id="9" type="button" onclick="doclick(this)">9</button>
+        <br>
+        <button id="C" type="button" onclick="doclick(this)">C</button>
+        <button id="0" type="button" onclick="doclick(this)">0</button>
+        <button id="." type="button" onclick="doclick(this)">.</button>
+        <br> <br>
+        <button id="AC" type="button" onclick="doclick(this)">AC</button>
+        <button id="+" type="button" onclick="doclick(this)">+</button>
+        <button id="-" type="button" onclick="doclick(this)">-</button>
+        <button id="*" type="button" onclick="doclick(this)">*</button>
+        <button id="/" type="button" onclick="doclick(this)">/</button>
+        <button id="=" type="button" onclick="doclick(this)">=</button>
     </div>
 </body>
 
