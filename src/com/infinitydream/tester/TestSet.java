@@ -1,6 +1,7 @@
 package com.infinitydream.tester;
 
 public class TestSet {
+    private String handle;
     private char[] eqnSequence;
     private String expectedResults;
     private String actualResults;
@@ -37,5 +38,13 @@ public class TestSet {
 
     public void setSuccess(boolean success) {
 	this.success = success;
+    }
+
+    public String getHandle() {
+        return handle;
+    }
+
+    public void setHandle(String handle) {
+        this.handle = handle;
     }
 }
