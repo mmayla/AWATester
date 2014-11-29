@@ -2,8 +2,8 @@ package com.infinitydream.tester;
 
 public class TestSet {
     private char[] eqnSequence;
-    private float expectedResults;
-    private float actualResults;
+    private String expectedResults;
+    private String actualResults;
     private boolean success;
 
     //getters and setters
@@ -15,19 +15,19 @@ public class TestSet {
 	this.eqnSequence = eqnSequence;
     }
 
-    public float getExpectedResults() {
+    public String getExpectedResults() {
 	return expectedResults;
     }
 
-    public void setExpectedResults(float expectedResults) {
+    public void setExpectedResults(String expectedResults) {
 	this.expectedResults = expectedResults;
     }
 
-    public float getActualResults() {
+    public String getActualResults() {
 	return actualResults;
     }
 
-    public void setActualResults(float actualResults) {
+    public void setActualResults(String actualResults) {
 	this.actualResults = actualResults;
     }
 
