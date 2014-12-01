@@ -74,9 +74,9 @@ public class WebTester {
 		      W= driver.findElement(By.className("results"));
 			  T.setActualResults(W.getText());
 			  if(T.getExpectedResults()==T.getActualResults())
-			  {
-				  T.setSuccess(true);  	  
-			  }
+			  T.setSuccess(true);  	  
+			  else
+				  T.setSuccess(false);  
 			  currList.set(i, T);
 			  driver.findElement(By.id("AC")).click();
 		  }
