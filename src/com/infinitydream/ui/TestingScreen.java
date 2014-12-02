@@ -7,6 +7,7 @@ import java.util.concurrent.ForkJoinPool.ManagedBlocker;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.JFileChooser;
 import javax.swing.JMenuBar;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
@@ -16,6 +17,7 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 
 import com.infinitydream.tester.Manager;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
@@ -57,6 +59,12 @@ public class TestingScreen extends JFrame {
 	menuBar.add(mnHelp);
 
 	JMenuItem mntmAbout = new JMenuItem("About");
+	mntmAbout.addActionListener(new ActionListener() {
+		public void actionPerformed(ActionEvent e) {
+		    About aboutscreen = new About();
+		    aboutscreen.setVisible(true);
+		}
+	});
 	mnHelp.add(mntmAbout);
 	contentPane = new JPanel();
 	contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -69,6 +77,11 @@ public class TestingScreen extends JFrame {
 	inputpath_textbox.setColumns(10);
 
 	JButton btnBrowse = new JButton("Browse");
+	btnBrowse.addActionListener(new ActionListener() {
+		public void actionPerformed(ActionEvent e) {
+		    browseButtonAction();
+		}
+	});
 	btnBrowse.setBounds(333, 128, 103, 25);
 	contentPane.add(btnBrowse);
 
@@ -105,10 +118,14 @@ public class TestingScreen extends JFrame {
 	contentPane.add(lblCalculatorUrl);
 	
 	//default online calculator
-	calcurl_textField.setText("file:///home/divoo/workspace/4th_year_workspace/CalculatorTester/WebCalculator/index.html");
+	//TODO remove after testing
+	//calcurl_textField.setText("file:///home/divoo/workspace/4th_year_workspace/CalculatorTester/WebCalculator/index.html");
 	
     }
 
+    /**
+     * run the app manager
+     */
     private void runTester() {
 
 	final String url = calcurl_textField.getText();
@@ -132,5 +149,13 @@ public class TestingScreen extends JFrame {
 	
 	new Thread(rn).start();
     
+    }
+
+    private void browseButtonAction() {
+	JFileChooser fc = new JFileChooser();
+	int returnVal = fc.showOpenDialog(this);
+	if(returnVal == JFileChooser.APPROVE_OPTION) {
+	    inputpath_textbox.setText(fc.getSelectedFile().getAbsolutePath());
+	}
     }
 }
