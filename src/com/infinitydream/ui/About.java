@@ -35,7 +35,7 @@ public class About extends JFrame {
     public About() {
     	setTitle("About");
 	setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-	setBounds(100, 100, 342, 300);
+	setBounds(100, 100, 342, 327);
 	contentPane = new JPanel();
 	contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 	setContentPane(contentPane);
@@ -65,5 +65,9 @@ public class About extends JFrame {
 	JLabel lblBy = new JLabel("By");
 	lblBy.setBounds(14, 0, 200, 50);
 	contentPane.add(lblBy);
+	
+	JLabel lblMohamedOsama = new JLabel("Mohamed Osama");
+	lblMohamedOsama.setBounds(175, 242, 164, 34);
+	contentPane.add(lblMohamedOsama);
     }
 }

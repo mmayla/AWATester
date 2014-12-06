@@ -10,5 +10,4 @@ public class Source {
 	TestingScreen frame = new TestingScreen();
 	frame.setVisible(true);
     }
-
 }
