@@ -80,7 +80,7 @@ function operationAction(total, num, operator) {
 };
 
 function calculate() {
-    var c, num = new String();
+    var c, num = "";
     var total = 0.0;
     var firstnum = true;
     var lastoperator = '+';
@@ -101,5 +101,7 @@ function calculate() {
     }
 
     clearResultTB();
-    updateResultTB(total);
+    if (isNaN(total))
+        updateResultTB("ERROR");
+    else updateResultTB(total);
 };
