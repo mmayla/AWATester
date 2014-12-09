@@ -8,33 +8,24 @@ import java.util.List;
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
 
-import org.junit.*;
-
-import static org.junit.Assert.*;
-import static org.hamcrest.CoreMatchers.*;
-
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
 
-@SuppressWarnings("unused")
 public class WebTester {
     private List<TestSet> currList;
     private WebDriver driver;
 
-    @Before
     public void setUp() {
 	driver = new FirefoxDriver();
     }
 
     // get list of Test Sets from Parser
-    @Before
     public void setUpList(List<TestSet> tsList) {
 	currList = tsList;
     }
 
-    @Test
     public void testList(String url) {
 	// Open page
 	driver.get(url);
@@ -69,7 +60,6 @@ public class WebTester {
 	}
     }
 
-    @After
     public void tearDown() throws Exception {
 	driver.quit();
     }
