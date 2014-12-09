@@ -1,74 +1,105 @@
-var lastopr = "+";
-var total = 0;
 var resultsTextbox;
-var lastNum;
-
-function init() {
-    lastopr = "+";
-    total = 0;
-    lastNum = '';
-}
 
 function doclick(elem) {
     resultsTextbox = document.getElementById("results");
-    var elemVal = elem.innerHTML;
+    var elemVal = elem.id;
 
-    if ((elemVal >= 0 && elemVal <= 9) || (elemVal == ".")) {
-        lastNum += elemVal;
+    switch (elemVal) {
+    case '=':
+        updateResultTB('=');
+        calculate();
+        break;
+
+    case 'C':
+        backspaceResultTB();
+        break;
+
+    case 'A':
+        clearResultTB();
+        updateResultTB('0');
+        break;
+
+    default:
+        if (getResultTB() === "ERROR")
+            clearResultTB();
         updateResultTB(elemVal);
-    } else {
-        switch (elemVal) {
-        case 'C':
-            //lastNum = lastNum.substring(0, lastNum.length - 1);
-            break;
-        case 'AC':
-            total = 0;
-            resultsTextbox.innerHTML = 0;
-            break;
-        case '=':
-            calculate(lastopr);
-            resultsTextbox.innerHTML = total;
-            //total = 0;
-            break;
-        default:
-            calculate(elemVal);
-            break;
-        }
-        lastNum = '';
-        console.log(">>" + total);
+        break;
     }
+};
 
-    //resultsTextbox.innerHTML = resultsTextbox.innerHTML+" "+elem.innerHTML;
+function getResultTB() {
+    return resultsTextbox.innerHTML.trim();
 };
 
 function updateResultTB(val) {
-    if (resultsTextbox.innerHTML.trim() == "0")
+    if (getResultTB() == "0")
         resultsTextbox.innerHTML = val;
     else resultsTextbox.innerHTML += val;
 };
 
-function calculate(operation) {
-    if(lastNum=='') {
-        lastopr=operation;
-        updateResultTB(operation);
+function clearResultTB() {
+    resultsTextbox.innerHTML = "";
+};
+
+function backspaceResultTB() {
+    if (resultsTextbox.innerHTML.trim().length == 1 || resultsTextbox.innerHTML.trim() == "ERROR")
+        resultsTextbox.innerHTML = '0';
+    else {
+        resultsTextbox.innerHTML = resultsTextbox.innerHTML.trim().substring(0, resultsTextbox.innerHTML.length - 1);
     }
-    else
-    switch (operation) {
+};
+
+function isOperator(c) {
+    if (c == "+" || c == "-" || c == "/" || c == "*" || c == "=")
+        return true;
+    return false;
+};
+
+function operationAction(total, num, operator) {
+    ntotal = parseFloat(total);
+    switch (operator) {
     case '+':
-        total += parseFloat(lastNum, 10);
-        updateResultTB(operation);
+        ntotal += parseFloat(num);
         break;
+
     case '-':
-        total -= parseFloat(lastNum);
-        updateResultTB(operation);
+        ntotal -= parseFloat(num);
         break;
+
     case '*':
-        total *= parseFloat(lastNum);
-        updateResultTB(operation);
+        ntotal *= parseFloat(num);
         break;
+
     case '/':
-        total /= parseFloat(lastNum);
-        updateResultTB(operation);
+        if (parseFloat(num) === 0)
+            return "ERROR";
+        ntotal /= parseFloat(num);
+        break;
     }
-    lastopr = operation;
+    return ntotal;
+};
+
+function calculate() {
+    var c, num = new String();
+    var total = 0.0;
+    var firstnum = true;
+    var lastoperator = '+';
+    for (var i = 0; i < resultsTextbox.innerHTML.length; i++) {
+        c = resultsTextbox.innerHTML[i];
+        if (isOperator(c)) {
+            if (firstnum) {
+                total = num;
+                firstnum = false;
+                num = "";
+                lastoperator = c;
+            } else {
+                total = operationAction(total, num, lastoperator);
+                lastoperator = c;
+                num = "";
+            }
+        } else num = num.concat(c);
+    }
+
+    clearResultTB();
+    updateResultTB(total);
 };
