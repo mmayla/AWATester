@@ -1,19 +1,216 @@
+html{
+background-image:url("congruent_pentagon.png");
+
+}
 .calc {
     min-height:72px;
     line-height:1;
 }
 
+.T1{
+	text-align: center;
+	color: orange;
+	font-family: Kristen ITC;
+	font-size: 60px;
+}
+
+.P,.P1,.P2,.P3,.P4{
+	text-align: left;
+	color: rgb(0,138,102);
+	font-family: Kristen ITC;
+	font-size: 15px;
+	position:absolute;	
+	left: 2%;
+}
+.P{
+	top:77%;
+	text-decoration: underline;
+	text-align: left;
+}
+.P1{
+	top:82%;
+}
+.P2{
+	top:85%;
+}
+.P3{
+	top:88%;
+}
+.P4{
+	top:91%;
+}
 .results {
     border-radius: 1px;
     border-right: 1px solid #D9D9D9;
-    border-width: 1px;
+    border-width: 5px;
     border-style: solid;
     border-color: #C0C0C0 #D9D9D9 #D9D9D9;
     border-image: none;
-    color: #333;
-    height: 20px;
-    left: 1%;
+    color:black ;
+    height: 25px;
+    left: 30%;
     position: absolute;
-    top: 1%;
-    width: 98%;
+    top: 18%;
+    font-size: 20px;
+    width: 40%;
+}
+.number1,.number2,.number3,
+.number4,.number5,.number6,
+.number7,.number8,.number9,
+.CharPoint,.number0,.CharC,.CharAC,.CharPlus,
+.CharMinus,.CharMultiplication,.CharDiv,.CharEqual{
+	width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    font-family: Arial;
+  	color:black ;
+  	font-size: 30px;
+
+
+background: #f5f6f6; /* Old browsers */
+background: -moz-linear-gradient(top,  #f5f6f6 0%, #dbdce2 21%, #b8bac6 49%, #dddfe3 80%, #f5f6f6 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f5f6f6), color-stop(21%,#dbdce2), color-stop(49%,#b8bac6), color-stop(80%,#dddfe3), color-stop(100%,#f5f6f6)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #f5f6f6 0%,#dbdce2 21%,#b8bac6 49%,#dddfe3 80%,#f5f6f6 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #f5f6f6 0%,#dbdce2 21%,#b8bac6 49%,#dddfe3 80%,#f5f6f6 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #f5f6f6 0%,#dbdce2 21%,#b8bac6 49%,#dddfe3 80%,#f5f6f6 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #f5f6f6 0%,#dbdce2 21%,#b8bac6 49%,#dddfe3 80%,#f5f6f6 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f6f6', endColorstr='#f5f6f6',GradientType=0 ); /* IE6-9 */
+
+}
+
+.number1:hover,.number2:hover,.number3:hover,
+.number4:hover,.number5:hover,.number6:hover,
+.number7:hover,.number8:hover,.number9:hover,
+.CharPoint:hover,.number0:hover,.CharC:hover,.CharAC:hover,.CharPlus:hover,
+.CharMinus:hover,.CharMultiplication:hover,.CharDiv:hover,.CharEqual:hover{
+	background: #fceabb; /* Old browsers */
+background: -moz-linear-gradient(top,  #fceabb 0%, #fccd4d 50%, #fbdf93 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fceabb), color-stop(50%,#fccd4d), color-stop(100%,#fbdf93)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #fceabb 0%,#fccd4d 50%,#fbdf93 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #fceabb 0%,#fccd4d 50%,#fbdf93 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #fceabb 0%,#fccd4d 50%,#fbdf93 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #fceabb 0%,#fccd4d 50%,#fbdf93 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', endColorstr='#fbdf93',GradientType=0 ); /* IE6-9 */
+
+}
+.number7{
+	position:absolute;
+	left:39%;
+	top:25%	;
+}
+.number8{
+	position:absolute;
+	left:44%;
+	top:25%	;
+}
+.number9{
+	position:absolute;
+	left:49%;
+	top:25%	;
+}
+.CharPlus{
+	position:absolute;
+	left:54%;
+	top:25%	;
+}
+.CharAC{
+	position:absolute;
+	left:59%;
+	top:25%	;
+	font-size: 25px;
+	
+background: #feccb1; /* Old browsers */
+background: -moz-linear-gradient(top,  #feccb1 0%, #f17432 50%, #ea5507 51%, #fb955e 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#feccb1), color-stop(50%,#f17432), color-stop(51%,#ea5507), color-stop(100%,#fb955e)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #feccb1 0%,#f17432 50%,#ea5507 51%,#fb955e 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #feccb1 0%,#f17432 50%,#ea5507 51%,#fb955e 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #feccb1 0%,#f17432 50%,#ea5507 51%,#fb955e 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #feccb1 0%,#f17432 50%,#ea5507 51%,#fb955e 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feccb1', endColorstr='#fb955e',GradientType=0 ); /* IE6-9 */
+	
+}
+.number4{
+	position:absolute;
+	left:39%;
+	top:33.5%	;
+}
+.number5{
+	position:absolute;
+	left:44%;
+	top:33.5%;	
+}
+.number6{
+	position:absolute;
+	left:49%;
+	top:33.5%;	
+}
+
+.CharMinus{
+	position:absolute;
+	left:54%;
+	top:33.5%;	
+}
+.CharC{
+	position:absolute;
+	left:59%;
+	top:33.5%;	
+	
+background: #ffb76b; /* Old browsers */
+background: -moz-linear-gradient(top,  #ffb76b 0%, #ffa73d 50%, #ff7c00 84%, #ff7f04 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffb76b), color-stop(50%,#ffa73d), color-stop(84%,#ff7c00), color-stop(100%,#ff7f04)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #ffb76b 0%,#ffa73d 50%,#ff7c00 84%,#ff7f04 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #ffb76b 0%,#ffa73d 50%,#ff7c00 84%,#ff7f04 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #ffb76b 0%,#ffa73d 50%,#ff7c00 84%,#ff7f04 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #ffb76b 0%,#ffa73d 50%,#ff7c00 84%,#ff7f04 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb76b', endColorstr='#ff7f04',GradientType=0 ); /* IE6-9 */
+
+}
+.number1{
+	position:absolute;
+	left:39%;
+	top:42%;
+}
+.number2{
+	position:absolute;
+	left:44%;
+	top:42%;
+}
+.number3{
+	position:absolute;
+	left:49%;
+	top:42%;
+}
+.CharMultiplication{
+	position:absolute;
+	left:54%;
+	top:42%;
+}
+.CharEqual{
+	width: 50px;
+    height: 110px;
+	position:absolute;
+	left:59%;
+	top:42%;
+}
+.number0{
+	width: 114px;
+    height: 50px;
+	position:absolute;
+	left:39%;
+	top:50.5%;
+}
+.CharPoint{
+	position:absolute;
+	left:49%;
+	top:50.5%;
+}
+.CharDiv{
+	position:absolute;
+	left:54%;
+	top:50.5%;
+}
+.logo{
+	position:absolute;
+	left:80%;
+	top:80%;
 }

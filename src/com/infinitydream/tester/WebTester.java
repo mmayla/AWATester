@@ -29,6 +29,7 @@ public class WebTester {
     public void testList(String url) {
 	// Open page
 	driver.get(url);
+	driver.manage().window().maximize();
 
 	TestSet T;
 	char[] eqn;
@@ -56,7 +57,8 @@ public class WebTester {
 	    else
 		T.setSuccess(false);
 	    currList.set(i, T);
-	    driver.findElement(By.id("A")).click();
+	    driver.navigate().refresh();
+	    //driver.findElement(By.id("A")).click();
 	}
     }
 
