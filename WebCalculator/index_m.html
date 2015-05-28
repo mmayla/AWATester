@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="js/calculator.js"></script>
+</head>
+
+<body onload="init()">
+    <div id="calc" class="calc">
+        <div id="results" class="results">0</div>
+
+        <div class="pads">
+            <div class="numpad">
+                <button id="1" class="padbutton" type="button" onclick="doclick(this)">1</button>
+                <button id="2" class="padbutton" type="button" onclick="doclick(this)">2</button>
+                <button id="3" class="padbutton" type="button" onclick="doclick(this)">3</button>
+                <button id="4" class="padbutton" type="button" onclick="doclick(this)">4</button>
+                <button id="5" class="padbutton" type="button" onclick="doclick(this)">5</button>
+                <button id="6" class="padbutton" type="button" onclick="doclick(this)">6</button>
+                <button id="7" class="padbutton" type="button" onclick="doclick(this)">7</button>
+                <button id="8" class="padbutton" type="button" onclick="doclick(this)">8</button>
+                <button id="9" class="padbutton" type="button" onclick="doclick(this)">9</button>
+                <button id="C" class="padbutton" type="button" onclick="doclick(this)">C</button>
+                <button id="0" class="padbutton" type="button" onclick="doclick(this)">0</button>
+                <button id="." class="padbutton" type="button" onclick="doclick(this)">.</button>
+            </div>
+            <div class="oprpad">
+                <button id="A" class="padbutton" type="button" onclick="doclick(this)">AC</button>
+                <button id="+" class="padbutton" type="button" onclick="doclick(this)">+</button>
+                <button id="-" class="padbutton" type="button" onclick="doclick(this)">-</button>
+                <button id="*" class="padbutton" type="button" onclick="doclick(this)">*</button>
+                <button id="/" class="padbutton" type="button" onclick="doclick(this)">/</button>
+                <button id="=" class="padbutton" type="button" onclick="doclick(this)">=</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
